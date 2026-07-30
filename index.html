@@ -1307,6 +1307,13 @@
             }
         }
 
+        @media (max-width: 1023px) {
+            #bg-canvas,
+            #light-bg-canvas {
+                display: none !important;
+            }
+        }
+
         @media (max-width: 768px) {
             .page {
                 max-width: 560px;
@@ -2211,7 +2218,7 @@
 
             function render(t) {
                 requestAnimationFrame(render);
-                if (document.hidden || document.body.classList.contains('light-mode')) return;
+                if (document.hidden || document.body.classList.contains('light-mode') || window.innerWidth < 1024) return;
 
                 var timeSec = t * 0.001;
                 gl.uniform1f(uTimeLoc, timeSec);
@@ -2571,7 +2578,7 @@
             var startTime = performance.now();
             function render(now) {
                 requestAnimationFrame(render);
-                if (document.hidden || !document.body.classList.contains('light-mode')) return;
+                if (document.hidden || !document.body.classList.contains('light-mode') || window.innerWidth < 1024) return;
 
                 currentParallaxX += (targetParallaxX - currentParallaxX) * 0.05;
                 currentParallaxY += (targetParallaxY - currentParallaxY) * 0.05;
