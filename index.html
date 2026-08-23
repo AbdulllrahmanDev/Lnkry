@@ -1373,7 +1373,12 @@
     </style>
 </head>
 
-<body>
+<body class="light-mode">
+    <script>
+        if (localStorage.getItem('theme') === 'dark') {
+            document.body.classList.remove('light-mode');
+        }
+    </script>
 
     <!-- WebGL Background Canvases (Dark Galaxy / Light Liquid Chrome) -->
     <canvas id="bg-canvas"></canvas>
@@ -1408,11 +1413,10 @@
 
         <!-- Top Navigation Header Bar -->
         <div class="top-nav-bar">
-            <!-- Light Mode Toggle Button (Left) -->
-            <button class="nav-control-btn" id="themeToggleBtn" title="Toggle Light Mode">
+            <!-- Theme Toggle Button (Left) -->
+            <button class="nav-control-btn" id="themeToggleBtn" title="Switch to Dark Mode">
                 <svg viewBox="0 0 24 24" class="nav-btn-icon">
-                    <path
-                        d="M12 7c-2.76 0-5 2.24-5 5s2.24 5 5 5 5-2.24 5-5-2.24-5-5-5zM2 13h2c.55 0 1-.45 1-1s-.45-1-1-1H2c-.55 0-1 .45-1 1s.45 1 1 1zm18 0h2c.55 0 1-.45 1-1s-.45-1-1-1h-2c-.55 0-1 .45-1 1s.45 1 1 1zM11 2v2c0 .55.45 1 1 1s1-.45 1-1V2c0-.55-.45-1-1-1s-1 .45-1 1zm0 18v2c0 .55.45 1 1 1s1-.45 1-1v-2c0-.55-.45-1-1-1s-1 .45-1 1zM5.99 4.58c-.39-.39-1.03-.39-1.41 0s-.39 1.03 0 1.41l1.06 1.06c.39.39 1.03.39 1.41 0s.39-1.03 0-1.41L5.99 4.58zm12.37 12.37c-.39-.39-1.03-.39-1.41 0s-.39 1.03 0 1.41l1.06 1.06c.39.39 1.03.39 1.41 0s.39-1.03 0-1.41l-1.06-1.06zm1.06-10.96c.39-.39.39-1.03 0-1.41s-1.03-.39-1.41 0l-1.06 1.06c-.39.39-.39 1.03 0 1.41s1.03.39 1.41 0l1.06-1.06zM7.05 18.36c.39-.39.39-1.03 0-1.41s-1.03-.39-1.41 0l-1.06 1.06c-.39.39-.39 1.03 0 1.41s1.03.39 1.41 0l1.06-1.06z" />
+                    <path d="M12.3 2a10 10 0 0 0 9.7 11.5 10 10 0 1 1-11.5-9.7 8.8 8.8 0 0 0 1.8-1.8z" />
                 </svg>
             </button>
 
@@ -1554,8 +1558,8 @@
         var LINKS = [
             {
                 label: 'Portfolio Website',
-                sub: 'portfolio.abdullrahman.workers.dev',
-                url: 'https://portfolio.abdullrahman.workers.dev/',
+                sub: 'mefolio.abdullrahman.workers.dev',
+                url: 'https://mefolio.abdullrahman.workers.dev/#home',
                 fg: '#ffffff',
                 bg: '#0284c7',
                 icon: '<svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>'
@@ -1656,7 +1660,7 @@
                     'TITLE:Frontend Developer',
                     'TEL;TYPE=CELL,VOICE:+201062120142',
                     'EMAIL;TYPE=INTERNET,HOME:abdulllrahman.dev@gmail.com',
-                    'URL:https://portfolio.abdullrahman.workers.dev/',
+                    'URL:https://mefolio.abdullrahman.workers.dev/#home',
                     'END:VCARD'
                 ].join('\r\n');
 
@@ -1742,9 +1746,11 @@
             }
         }
 
-        // Restore saved theme preference
+        // Restore saved theme preference (default to Light Mode)
         var savedTheme = localStorage.getItem('theme');
-        if (savedTheme === 'light') {
+        if (savedTheme === 'dark') {
+            applyTheme(false);
+        } else {
             applyTheme(true);
         }
 
