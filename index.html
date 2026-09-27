@@ -144,9 +144,6 @@
             font-weight: 800;
         }
 
-        body.light-mode .term-title {
-            color: #475569;
-        }
 
         body.light-mode .bio-subtitle,
         body.light-mode .bio-terminal {
@@ -736,50 +733,10 @@
             box-shadow: 0 20px 48px rgba(0, 0, 0, 0.55);
         }
 
-        /* Terminal Window Header */
-        .terminal-header {
-            position: absolute;
-            top: 16px;
-            left: 20px;
-            display: flex;
-            align-items: center;
-            gap: 7px;
-        }
-
-        .term-btn {
-            width: 11px;
-            height: 11px;
-            border-radius: 50%;
-            transition: opacity 0.2s ease;
-        }
-
-        .term-close {
-            background: #ff5f56;
-        }
-
-        .term-min {
-            background: #ffbd2e;
-        }
-
-        .term-max {
-            background: #27c93f;
-        }
-
-        .term-title {
-            position: absolute;
-            top: 12px;
-            right: 20px;
-            font-family: var(--font-mono);
-            font-size: 0.72rem;
-            color: var(--text-muted);
-            opacity: 0.75;
-            letter-spacing: 0.02em;
-        }
-
         /* Avatar Container & Hollowed Circle Portal */
         .avatar-container {
             position: relative;
-            margin-top: 14px;
+            margin-top: 6px;
             margin-bottom: 18px;
             display: inline-flex;
             align-items: center;
@@ -1450,13 +1407,6 @@
         <!-- Main Profile Card -->
         <header class="profile-card" id="profileCard">
             <div class="spotlight"></div>
-
-            <div class="terminal-header">
-                <span class="term-btn term-close"></span>
-                <span class="term-btn term-min"></span>
-                <span class="term-btn term-max"></span>
-            </div>
-            <span class="term-title">Abdulllrahman.Dev</span>
 
             <div class="avatar-container">
                 <div class="avatar-glow"></div>
