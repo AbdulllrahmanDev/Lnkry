@@ -5,32 +5,33 @@
 <style type="text/css">
 	.st0{fill:#547CBE;}
 	.st1{fill:url(#SVGID_1_);}
-	.st2{fill:url(#SVGID_00000086676922038390685500000000670642117469319081_);}
+	.st2{fill:url(#SVGID_00000032640077511228759020000003565022359722454160_);}
+	.st3{fill:url(#SVGID_00000156565825547280023150000010396048692431810708_);}
+	.st4{fill:url(#SVGID_00000106844994284500683690000017882276313252876189_);}
 </style>
 <g>
-	<path class="st0" d="M57.7,96.6"/>
 	<g>
 		
-			<image style="overflow:visible;opacity:0.54;" width="2209" height="2209" xlink:href="E4B7C450.png"  transform="matrix(0.24 0 0 0.24 -7.0927 -12.1007)">
+			<image style="overflow:visible;opacity:0.54;" width="1270" height="1269" xlink:href="C654CF61.png"  transform="matrix(0.24 0 0 0.24 105.6587 100.6993)">
 		</image>
 		<g>
 			<g>
-				<radialGradient id="SVGID_1_" cx="241.7192" cy="431.05" r="78.2927" gradientUnits="userSpaceOnUse">
+				<radialGradient id="SVGID_1_" cx="245.4548" cy="349.3758" r="42.9737" gradientUnits="userSpaceOnUse">
 					<stop  offset="0" style="stop-color:#34C6F4"/>
 					<stop  offset="1" style="stop-color:#0099CD"/>
 				</radialGradient>
-				<polygon class="st1" points="220.9,500 195.1,488.6 269.7,358.6 295.4,370.1 				"/>
+				<polygon class="st1" points="234,387.2 219.9,380.9 260.8,309.6 274.9,315.9 				"/>
 				
-					<linearGradient id="SVGID_00000052086262973513738860000013197837197646086075_" gradientUnits="userSpaceOnUse" x1="0" y1="209.6751" x2="500" y2="209.6751">
+					<linearGradient id="SVGID_00000039121991250211771370000006192813353643327669_" gradientUnits="userSpaceOnUse" x1="112.7785" y1="227.8662" x2="387.2215" y2="227.8662">
 					<stop  offset="0" style="stop-color:#46C8F5"/>
 					<stop  offset="0.1276" style="stop-color:#48BEEE"/>
 					<stop  offset="0.3595" style="stop-color:#47A9DF"/>
 					<stop  offset="0.6142" style="stop-color:#488FCD"/>
 				</linearGradient>
-				<path style="fill:url(#SVGID_00000052086262973513738860000013197837197646086075_);" d="M0,419c2.9-5.4,8.1-15,14.7-27
-					c54.4-99,103-177.9,152.4-258.4c20.8-33.9,36.4-59,36.4-59c7.5-12.1,13.1-21,22.4-35.9C236.1,22.5,244.4,9,250,0
-					c6.2,10,14.6,23.6,24.6,39.7c9.1,14.6,16.2,26.1,20.2,32.5c38.2,61.3,75.7,123,114.3,184c33.1,52.3,56.5,87.9,82.7,144.8
-					c3.5,7.6,6.3,14,8.2,18.3C360.3,247.2,133.7,256.5,0,419z"/>
+				<path style="fill:url(#SVGID_00000039121991250211771370000006192813353643327669_);" d="M112.8,342.8c1.6-3,4.5-8.2,8.1-14.8
+					c29.9-54.3,56.5-97.7,83.7-141.8c11.4-18.6,20-32.4,20-32.4c4.1-6.7,7.2-11.5,12.3-19.7c5.6-9,10.1-16.3,13.2-21.3
+					c3.4,5.5,8,13,13.5,21.8c5,8,8.9,14.3,11.1,17.8c21,33.6,41.5,67.5,62.8,101c18.2,28.7,31,48.2,45.4,79.5
+					c1.9,4.2,3.5,7.7,4.5,10.1C310.6,248.5,186.1,253.5,112.8,342.8z"/>
 			</g>
 		</g>
 	</g>
