@@ -4,11 +4,11 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
-    <title>Abdulrahman Hussein &middot; Frontend Developer</title>
+    <title>Abdulrahman Hussein &middot; Full Stack Developer</title>
     <meta name="description"
-        content="Abdulrahman Hussein - Frontend Developer building clean, modern, and high-performance web applications." />
-    <meta property="og:title" content="Abdulrahman Hussein - Frontend Developer" />
-    <meta property="og:description" content="Frontend Developer building clean, modern, and performant web applications." />
+        content="Abdulrahman Hussein - Full Stack Developer building clean, modern, and high-performance web applications." />
+    <meta property="og:title" content="Abdulrahman Hussein - Full Stack Developer" />
+    <meta property="og:description" content="Full Stack Developer building clean, modern, and performant web applications." />
     <meta property="og:type" content="website" />
     <link rel="icon" type="image/svg+xml" href="favicon.svg" />
 
@@ -16,7 +16,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-        href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Sora:wght@500;600;700&family=Space+Grotesk:wght@500;600;700&family=Syne:wght@600;700&display=swap"
         rel="stylesheet" />
 
     <style>
@@ -148,22 +148,15 @@
             color: #475569;
         }
 
+        body.light-mode .bio-subtitle,
         body.light-mode .bio-terminal {
-            background: rgba(2, 132, 199, 0.06);
-            border-color: rgba(2, 132, 199, 0.2);
-            box-shadow: inset 0 1px 2px rgba(2, 132, 199, 0.05);
-        }
-
-        body.light-mode .bio-prompt {
-            color: #059669;
-        }
-
-        body.light-mode .bio-prefix {
+            background: linear-gradient(135deg, #0284c7 0%, #0369a1 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
             color: #0284c7;
-        }
-
-        body.light-mode .bio-text {
-            color: #0f172a;
+            border: none;
+            box-shadow: none;
         }
 
         /* Vibrant Blue Cursor for TextType Component in Light and Dark Modes */
@@ -792,7 +785,6 @@
             align-items: center;
             justify-content: center;
             z-index: 2;
-            cursor: pointer;
         }
 
         .avatar-glow {
@@ -870,70 +862,32 @@
             filter: drop-shadow(0 0 6px rgba(56, 189, 248, 0.5));
         }
 
-        /* Typing Terminal Bio */
+        /* Role / Bio Subtitle */
+        .bio-subtitle,
         .bio-terminal {
-            font-family: var(--font-mono);
-            font-size: 0.85rem;
-            color: var(--text-secondary);
-            background: rgba(0, 0, 0, 0.35);
-            border: 1px solid rgba(255, 255, 255, 0.08);
-            border-radius: var(--radius-md);
-            padding: 8px 16px;
-            margin-top: 4px;
-            display: inline-flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            align-items: center;
-            gap: 6px 8px;
-            max-width: 100%;
-            box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.3);
-            text-align: center;
-        }
-
-        .bio-line-prefix {
-            display: inline-flex;
-            align-items: center;
-            gap: 6px;
-            white-space: nowrap;
-        }
-
-        .bio-line-text {
-            display: inline-flex;
-            align-items: center;
-            gap: 2px;
-            white-space: nowrap;
-        }
-
-        .bio-prompt {
-            color: var(--accent-emerald);
+            font-family: 'Space Grotesk', var(--font-sans);
+            font-size: 1.05rem;
             font-weight: 600;
-        }
-
-        .bio-prefix {
+            letter-spacing: 0.05em;
+            margin-top: 2px;
+            margin-bottom: 2px;
+            padding: 0;
+            background: none;
+            border: none;
+            box-shadow: none;
+            text-align: center;
+            display: inline-block;
+            background: linear-gradient(135deg, #38bdf8 0%, #0ea5e9 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
             color: var(--accent-cyan);
-            font-weight: 500;
         }
 
         .bio-text {
-            color: #f1f5f9;
-            font-weight: 500;
-        }
-
-        .cursor {
-            display: inline-block;
-            width: 7px;
-            height: 15px;
-            background: var(--accent-cyan);
-            vertical-align: middle;
-            border-radius: 1px;
-            animation: blink 1s step-start infinite;
-            box-shadow: 0 0 6px var(--accent-cyan);
-        }
-
-        @keyframes blink {
-            50% {
-                opacity: 0;
-            }
+            color: inherit;
+            font-weight: inherit;
+            font-family: inherit;
         }
 
 
@@ -1357,9 +1311,10 @@
                 font-size: 1.4rem;
             }
 
-            .bio-terminal {
-                font-size: 0.8rem;
-                padding: 7px 12px;
+            .bio-terminal,
+            .bio-subtitle {
+                font-size: 0.95rem;
+                padding: 0;
             }
 
             .link-card {
@@ -1501,7 +1456,7 @@
             </div>
             <span class="term-title">Abdulllrahman.Dev</span>
 
-            <div class="avatar-container" title="Abdulrahman Hussein">
+            <div class="avatar-container">
                 <div class="avatar-glow"></div>
                 <div class="avatar-wrap">
                     <img class="avatar" src="favicon.svg" loading="eager" decoding="async" fetchpriority="high"
@@ -1517,12 +1472,7 @@
                 </svg>
             </h1>
 
-            <div class="bio-terminal">
-                <span class="bio-line-text">
-                    <span class="bio-text" id="typingBio"></span>
-                    <span class="text-type-cursor" id="typingCursor">|</span>
-                </span>
-            </div>
+            <div class="bio-subtitle">Full Stack Developer</div>
 
 
             <!-- Quick Action Pills -->
@@ -1901,55 +1851,7 @@
             });
         });
 
-        // React Bits TextType Component Animation Engine
-        var phrases = [
-            "Frontend Developer",
-            "React & Node.js Specialist",
-            "UI/UX & Frontend Architect",
-            "Open Source Contributor"
-        ];
-        var phraseIndex = 0;
-        var charIndex = 0;
-        var isDeleting = false;
-        var typingBioEl = document.getElementById('typingBio');
-        var typingSpeed = 65;
-        var deletingSpeed = 35;
-        var pauseDuration = 1800;
 
-        function runTextTypeAnimation() {
-            if (!typingBioEl) return;
-            var currentPhrase = phrases[phraseIndex];
-
-            if (isDeleting) {
-                charIndex--;
-                typingBioEl.textContent = currentPhrase.substring(0, charIndex);
-
-                if (charIndex === 0) {
-                    isDeleting = false;
-                    phraseIndex = (phraseIndex + 1) % phrases.length;
-                    setTimeout(runTextTypeAnimation, 350);
-                    return;
-                }
-                setTimeout(runTextTypeAnimation, deletingSpeed);
-            } else {
-                charIndex++;
-                typingBioEl.textContent = currentPhrase.substring(0, charIndex);
-
-                if (charIndex === currentPhrase.length) {
-                    isDeleting = true;
-                    setTimeout(runTextTypeAnimation, pauseDuration);
-                    return;
-                }
-
-                // Add human-like variable typing speed within range
-                var variableSpeed = typingSpeed + (Math.random() * 30 - 15);
-                setTimeout(runTextTypeAnimation, variableSpeed);
-            }
-        }
-
-        if (typingBioEl) {
-            setTimeout(runTextTypeAnimation, 400);
-        }
 
         // -----------------------------------------------------------
         // GRADIENT WAVES WEBGL2 SHADER (DARK MODE EXCLUSIVE BACKGROUND)
