@@ -1077,31 +1077,33 @@
 
         /* Copy Button */
         .copy-btn {
-            width: 34px;
-            height: 34px;
-            border-radius: var(--radius-sm);
-            border: 1px solid rgba(255, 255, 255, 0.08);
-            background: rgba(255, 255, 255, 0.04);
+            width: 32px;
+            height: 32px;
+            border: none;
+            background: transparent;
             color: var(--text-muted);
             display: flex;
             align-items: center;
             justify-content: center;
             cursor: pointer;
-            transition: all 0.25s var(--ease-out);
+            transition: color 0.25s var(--ease-out), opacity 0.25s var(--ease-out);
             z-index: 2;
+            padding: 0;
+            box-shadow: none;
         }
 
         .copy-btn:hover {
-            background: rgba(56, 189, 248, 0.15);
-            border-color: rgba(56, 189, 248, 0.4);
+            background: transparent;
+            border: none;
             color: var(--accent-cyan);
-            transform: scale(1.08);
+            box-shadow: none;
         }
 
         .copy-btn.copied {
-            background: rgba(16, 185, 129, 0.18);
-            border-color: rgba(16, 185, 129, 0.45);
+            background: transparent;
+            border: none;
             color: #34d399;
+            box-shadow: none;
         }
 
         .copy-btn svg {
