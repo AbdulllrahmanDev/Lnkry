@@ -112,13 +112,19 @@
             box-shadow: 0 4px 14px rgba(0, 0, 0, 0.05), inset 0 1px 0 rgba(255, 255, 255, 0.9);
         }
 
-        body.light-mode .nav-control-btn:hover,
-        body.light-mode .quick-action-pill:hover {
+        body.light-mode .nav-control-btn:hover {
             background: #ffffff;
             border-color: rgba(2, 132, 199, 0.45);
             color: #0284c7;
             transform: translateY(-2px);
             box-shadow: 0 6px 18px rgba(2, 132, 199, 0.18);
+        }
+
+        body.light-mode .quick-action-pill:hover {
+            background: #ffffff;
+            border-color: rgba(2, 132, 199, 0.45);
+            color: #0284c7;
+            box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06), inset 0 1px 0 rgba(255, 255, 255, 0.9);
         }
 
         body.light-mode .circular-status-badge {
@@ -956,26 +962,21 @@
             text-decoration: none;
             cursor: pointer;
             backdrop-filter: blur(8px);
-            transition: all 0.25s var(--ease-out-back);
+            transition: background 0.25s ease, border-color 0.25s ease, color 0.25s ease, box-shadow 0.25s ease;
         }
 
         .quick-action-pill .action-icon {
             width: 16px;
             height: 16px;
             fill: var(--accent-cyan);
-            transition: transform 0.25s var(--ease-out);
+            transition: fill 0.25s ease;
         }
 
         .quick-action-pill:hover {
             background: rgba(56, 189, 248, 0.15);
             border-color: rgba(56, 189, 248, 0.45);
             color: #ffffff;
-            transform: translateY(-2px);
-            box-shadow: 0 6px 18px rgba(56, 189, 248, 0.22);
-        }
-
-        .quick-action-pill:hover .action-icon {
-            transform: scale(1.15);
+            box-shadow: none;
         }
 
         /* Links Section */
